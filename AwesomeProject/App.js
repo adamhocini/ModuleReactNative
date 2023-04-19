@@ -1,6 +1,8 @@
 import { React, useState } from 'react';
 import { Keyboard, KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import Task from './components/Task';
+import Task from './components/Calendar';
+
 
 export default function App() {
   const [task, setTask] = useState();
@@ -27,6 +29,13 @@ splice = permet de supprimer. */}
       {/*today's tasks*/}
       <View style={styles.tasksWrapper}>
         <Text style={styles.tasksTitle}>Todo List</Text>
+
+        <TouchableOpacity onPress={() => navigation.navigate('Calendrier')}>
+            <View style={styles.button}>
+                <Text style={styles.buttonText}>Calendrier</Text>
+            </View>
+        </TouchableOpacity>
+
 
         <View style={styles.items}>
 
@@ -57,6 +66,7 @@ splice = permet de supprimer. */}
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -102,4 +112,25 @@ const styles = StyleSheet.create({
     borderWidth: 1,
   },
   addText: {},
+  button: {
+    width: 110,
+    height: 40,
+    backgroundColor: '#fff',
+    position: 'absolute',
+    padding: 10,
+    borderRadius: 5,
+    marginVertical: 10,
+    justifyContent: 'center',
+    flexDirection: 'row',
+    borderWidth: 1,
+    alignItems: 'center',
+    borderColor: '#C0C0C0',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  buttonText: {
+    color: '#000',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
 });
