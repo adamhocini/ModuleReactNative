@@ -1,15 +1,5 @@
 import React from 'react';
-import { useNavigation } from '@react-navigation/native';
 
-const navigation = useNavigation(); {
-    return (
-        <TouchableOpacity onPress={() => navigation.navigate('Calendrier')}>
-            <View style={styles.button}>
-                <Text style={styles.buttonText}>Calendrier</Text>
-            </View>
-        </TouchableOpacity>
-    )
-}
 
 const styles = StyleSheet.create({
     button: {

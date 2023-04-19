@@ -1,8 +1,19 @@
 import { React, useState } from 'react';
 import { Keyboard, KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import Task from './components/Task';
-import Task from './components/Calendar';
+import Calendar from './components/Calendar';
+import { useNavigation } from '@react-navigation/native';
 
+
+const navigation = useNavigation(); {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Calendar" component={Calendar} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
 
 export default function App() {
   const [task, setTask] = useState();
@@ -65,7 +76,9 @@ splice = permet de supprimer. */}
       </KeyboardAvoidingView>
     </View>
   );
+  
 }
+
 
 
 const styles = StyleSheet.create({
