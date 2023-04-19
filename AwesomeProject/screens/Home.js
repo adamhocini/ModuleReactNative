@@ -1,5 +1,6 @@
 import { React, useState } from 'react';
-import { Keyboard, KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity, KeyboardAvoidingView, TextInput, Keyboard } from 'react-native';
+import Task from '../components/Task';
 
 const Home = () => {
     const [task, setTask] = useState();
@@ -65,8 +66,6 @@ const Home = () => {
 
 
 export default Home
-
-
 
 
 
