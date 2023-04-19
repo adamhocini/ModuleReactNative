@@ -5,7 +5,12 @@ const Settings =
         return (
             <View>
                 <Text>This is the SettingsScreen</Text>
-            </View> 
+                <TouchableOpacity onPress={() => navigation.navigate('Calendrier')}>
+                    <View style={styles.button}>
+                        <Text style={styles.buttonText}>Settings</Text>
+                    </View>
+                </TouchableOpacity>
+            </View>
         );
     }
 
@@ -27,4 +32,4 @@ const styles = StyleSheet.create({
 })
 
 
-export default Calendar;
+export default Settings;

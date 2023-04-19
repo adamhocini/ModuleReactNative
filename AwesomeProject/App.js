@@ -1,6 +1,7 @@
 import { React, useState } from 'react';
 import { Keyboard, KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import Task from './components/Task';
+import Settings from './components/Settings';
 
 
 export default function App() {
@@ -31,7 +32,7 @@ splice = permet de supprimer. */}
 
         <TouchableOpacity onPress={() => navigation.navigate('Calendrier')}>
             <View style={styles.button}>
-                <Text style={styles.buttonText}>Calendrier</Text>
+                <Text style={styles.buttonText}>Settings</Text>
             </View>
         </TouchableOpacity>
 
