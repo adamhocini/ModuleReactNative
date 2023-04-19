@@ -2,7 +2,7 @@ import { React, useState } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, KeyboardAvoidingView, TextInput, Keyboard } from 'react-native';
 import Task from '../components/Task';
 
-const Home = () => {
+const Home = ({navigation}) => {
     const [task, setTask] = useState();
     const [taskItems, setTaskItems] = useState([]);
 
@@ -27,9 +27,9 @@ const Home = () => {
             <View style={styles.tasksWrapper}>
                 <Text style={styles.tasksTitle}>Todo List</Text>
 
-                <TouchableOpacity onPress={() => navigation.navigate('Calendrier')}>
+                <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
                     <View style={styles.button}>
-                        <Text style={styles.buttonText}>Calendrier</Text>
+                        <Text style={styles.buttonText}>Settings</Text>
                     </View>
                 </TouchableOpacity>
 
