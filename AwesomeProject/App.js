@@ -6,16 +6,18 @@ export default function App() {
   const [task, setTask] = useState();
   const [taskItems, setTaskItems] = useState([]);
 
+  {/*"task" et "taskItems" sont tous les définis à l'aide de la méthode "useState" */ }
   const handleAddTask = () => {
     Keyboard.dismiss();
     setTaskItems([...taskItems, task])
     setTask(null);
   }
 
-{/*splice = êrmet de supprimer*/}
+  {/*La fonction "completeTask" est appelée lorsque l'utilisateur appuie sur une tâche pour la marquer comme terminée
+splice = permet de supprimer. */}
   const completeTask = (index) => {
     let itemsCopy = [...taskItems];
-    itemsCopy.splice(index,1);
+    itemsCopy.splice(index, 1);
     setTaskItems(itemsCopy);
   }
 
@@ -27,11 +29,11 @@ export default function App() {
         <Text style={styles.tasksTitle}>Todo List</Text>
 
         <View style={styles.items}>
-          
+
           {
             taskItems.map((item, index) => {
               return (
-                <TouchableOpacity key={index} onPress={()=> completeTask(index)}>
+                <TouchableOpacity key={index} onPress={() => completeTask(index)}>
                   <Task text={item} />
                 </TouchableOpacity>
               )
@@ -45,7 +47,7 @@ export default function App() {
         behavior={Platform.OS === "ios" ? "padding" : "height"}
         style={styles.writeTaskWrapper}>
         <TextInput style={styles.input} placeholder={'Ecrivez une tache'} value={task} onChangeText={text => setTask(text)} />
-
+        {/* La fonction "handleAddTask" est appelée lorsque l'utilisateur appuie sur le bouton "+" */}
         <TouchableOpacity onPress={() => handleAddTask()}>
           <View style={styles.addWrapper}>
             <Text style={styles.addText}>+</Text>
