@@ -1,14 +1,14 @@
 import React from 'react';
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 
 
 function Settings() {
     return (
         <View>
-            <Text>This is the SettingsScreen</Text>
-            <TouchableOpacity onPress={() => navigation.navigate('Profil')}>
+            <Text>This is the Profil Screen</Text>
+            <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
                 <View style={styles.button}>
-                    <Text style={styles.buttonText}>Profil</Text>
+                    <Text style={styles.buttonText}>Settings</Text>
                 </View>
             </TouchableOpacity>
         </View>
