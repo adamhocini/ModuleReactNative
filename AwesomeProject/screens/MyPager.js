@@ -7,14 +7,14 @@ const MyPager = () => {
     <View style={{ flex: 1 }}>
       <PagerView style={styles.viewPager} initialPage={0}>
         <View style={styles.page} key="1">
-          <Text>First page</Text>
+          <Text>Home</Text>
           <Text>Swipe ➡️</Text>
         </View>
         <View style={styles.page} key="2">
-          <Text>Second page</Text>
+          <Text>Settings</Text>
         </View>
         <View style={styles.page} key="3">
-          <Text>Third page</Text>
+          <Text>Camera</Text>
         </View>
       </PagerView>
     </View>

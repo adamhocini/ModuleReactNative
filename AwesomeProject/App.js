@@ -14,7 +14,8 @@ export default function App() {
 
   return (
 
-  <NavigationContainer>
+  <PaperProvider>
+    <NavigationContainer>
     <Stack.Navigator>
     <Stack.Screen name="Home" component={Home} />
     <Stack.Screen name="Settings" component={Settings} />
@@ -22,6 +23,7 @@ export default function App() {
     <Stack.Screen name='Camera' component={Camera} options={{ title: 'Camera' }} />
     </Stack.Navigator>
   </NavigationContainer>
+  </PaperProvider>
 
   );
 }

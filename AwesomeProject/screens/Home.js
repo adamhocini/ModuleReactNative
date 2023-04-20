@@ -1,5 +1,6 @@
 import { React, useState } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, KeyboardAvoidingView, TextInput, Keyboard } from 'react-native';
+import { Title } from 'react-native-paper';
 import Task from '../components/Task';
 
 const Home = ({navigation}) => {
@@ -25,7 +26,7 @@ const Home = ({navigation}) => {
 
             {/*today's tasks*/}
             <View style={styles.tasksWrapper}>
-                <Text style={styles.tasksTitle}>Todo List</Text>
+                <Title>Todo App</Title>
 
                 <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
                     <View style={styles.button}>

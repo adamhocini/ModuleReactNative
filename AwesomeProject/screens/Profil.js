@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 
 
-function Settings() {
+function Settings(navigation) {
     return (
         <View>
             <Text>This is the Profil Screen</Text>
